@@ -60,13 +60,29 @@ const { title = "Mona's Bookmark Manager App" } = Astro.props;
       body {
         font-family: var(--font-body);
         line-height: 1.5;
-        max-width: 40rem;
+        max-width: 44rem;
         margin: 0 auto;
         padding: 2.5rem 1.25rem 4rem;
+        background:
+          radial-gradient(circle at 20% 0%, color-mix(in srgb, var(--accent) 12%, transparent), transparent 32rem),
+          canvas;
       }
-      header { margin-bottom: 1.5rem; }
-      h1 { margin: 0 0 0.25rem; font-size: 1.75rem; font-family: var(--font-head); letter-spacing: -0.01em; }
+      header {
+        margin-bottom: 1.5rem;
+        padding: 1.25rem 1.25rem 1.15rem;
+        border: 1px solid var(--border);
+        border-radius: calc(var(--radius) * 1.5);
+        background: color-mix(in srgb, canvas 92%, var(--accent) 8%);
+      }
+      h1 { margin: 0 0 0.25rem; font-size: 1.75rem; font-family: var(--font-head); letter-spacing: -0.02em; }
       .tagline { margin: 0; color: var(--muted); }
+
+      main {
+        padding: 1.25rem;
+        border: 1px solid var(--border);
+        border-radius: calc(var(--radius) * 1.5);
+        background: color-mix(in srgb, canvas 96%, var(--accent) 4%);
+      }
 
       form {
         display: flex;
